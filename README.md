@@ -18,3 +18,5 @@ A single-themed Habbo Content Management System using Angular.js and a PHP API. 
 > Is this finished, though?
 
 This is not finished. And will never be. This should give you a head start on how to create Habbo SPAs using Angular, and how sessions, user data, and other stuff should be handled with a PHP API.
+
+![alt tag](http://i.imgur.com/Bf4IGSA.png)
