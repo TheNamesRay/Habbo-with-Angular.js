@@ -1,0 +1,6 @@
+<span id="motto-changer" ng-controller="MottoChangerController" ng-hide="main.user == null">
+	<form ng-submit="changeMotto()">
+		<input type="text" ng-model="input.data.motto" ng-class="{error: input.error != null}" placeholder="{{ main.user.motto }}">
+		<button id="motto-changer-button" class="button">Change</button>
+	</form>
+</span>

@@ -1,0 +1,35 @@
+<div id="column-left" class="small">
+   <div class="box">
+      <div class="title green">Your Account Settings</div>
+      <form class="regular" ng-submit="editAccount()">
+         <section>
+            <h2>Your Username</h2>
+            <p>Not all Habbos can change their username. Use this wisely.</p>
+            <input type="text" placeholder="{{ main.user.username }}" disabled>
+         </section>
+         <section>
+            <h2>Your Email Address</h2>
+            <p>Change your email address if you think your account is at risk.</p>
+            <input type="text" placeholder="Introduce a new email address">
+         </section>
+         <section>
+            <h2>Your Password</h2>
+            <p>Change your password if you think your account is at risk.</p>
+            <input type="password" placeholder="Introduce a new password">
+         </section>
+         <button class="button green block" style="margin-top:20px">SAVE ACCOUNT DETAILS</button>
+      </form>
+   </div>
+</div>
+<div id="column-right" class="big">
+   <div class="box">
+      <div class="title">Why should I change this?</div>
+      <img src="img/lock.gif" style="float:right; margin-left:5px">
+      <p>You can edit your details if you think your account is at risk. For example, changing your email address or password will help protect your account if you've used Habbo on a public computer.</p>
+   </div>
+   <div class="box">
+      <div class="title red">Need help?</div>
+      <p>If you need help with your account don't hesitate to contact us through the support page. Our support agents will take up to 24 hours to reply to your call.</p>
+      <a class="button right">GO TO SUPPORT</a>
+   </div>
+</div>

@@ -1,0 +1,9 @@
+<ul class="articles-list" ng-controller="ArticleBeansController">
+	<li ng-repeat="bean in articlebeans">
+		<img src="{{ bean.image }}">
+		<span>
+			<h1>{{ bean.title }}</h1>
+			<p>{{ bean.text }}</p>
+		</span>
+	</li>
+</ul>

@@ -1,0 +1,18 @@
+<div id="column-left">
+	<div class="box no-padding">
+		<div class="title orange">{{ ::main.locale.latestArticles }}</div>
+		<ng-include src="'partials/modules/articlebeans.html'"></ng-include>
+	</div>
+</div>
+<div id="column-right">
+	<div class="box">
+		<div class="title">{{ ::main.locale.loginAndGo }}</div>
+		<form class="regular" ng-submit="login()">
+			<p>{{ ::main.locale.notAMember }} <a href="/registration">{{ ::main.locale.joinForFree }}</a>.
+			<div ng-hide="input.error==null" ng-bind="input.error" class="errorBean"></div>
+			<input type="text" ng-model="input.data.username" placeholder="{{ ::main.locale.username }}"/>
+			<input type="password" ng-model="input.data.password" placeholder="{{ ::main.locale.password }}"/>
+			<button style="margin-top:10px;" class="button green block">Login to Habbo</button>
+		</form>
+	</div>
+</div>

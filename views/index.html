@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="Habbo">
+   <head>
+      <meta charset="utf8">
+      <base href="/">
+      <script type="text/javascript">
+      var API = "%api%";
+      </script>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Habbo</title>
+      <link rel="stylesheet" href="css/app.css">
+   </head>
+   <body ng-controller="MainController">
+      <div id="overlay" ng-if="false">
+         <span></span>
+      </div>
+      <div class="container">
+         <div id="head">
+            <div class="left">
+               <a href="/"><span id="logo"></span></a>
+            </div>
+            <div class="right">
+               <a id="enter-top" ng-hide="main.user.username == null" href="/client" class="button">{{ ::main.locale.enter }}&nbsp;{{ ::main.locale.habbo }}&nbsp;{{ ::main.locale.hotel }}</a>
+               <a id="enter-top" ng-show="main.user.username == null" href="/registration" class="button green">{{ ::main.locale.createAnAccount }}</a>
+               <span id="active-users">142 <i class="fa fa-users"></i></span>
+            </div>
+         </div>
+         <div id="subhead">
+            <ul id="menu" ng-class="{full: main.user == null}">
+               <li ng-show="main.user.username == null">
+                  <a href="/">{{ ::main.locale.home }}</a>
+               </li>
+               <li ng-hide="main.user.username == null">
+                  {{ main.user.username | limitTo:4 }} {{ main.user.username.length > 4 ? '...' : ''}}
+                  <i class="fa fa-caret-down"></i>
+                  <ul class="dropdown">
+                     <a href="me"><li class="fill"></li></a>
+                     <li><a href="account">{{ ::main.locale.account }}</a></li>
+                     <li><a href="profile">{{ ::main.locale.profile }}</a></li>
+                     <li><a href="logout">{{ ::main.locale.logout }}</a></li>
+                  </ul>
+               </li>
+               <li>
+                  {{ ::main.locale.community }} <i class="fa fa-caret-down"></i>
+                  <ul class="dropdown">
+                     <a href="community"><li class="fill"></li></a>
+                     <li><a href="newswire">{{ ::main.locale.newswire }}</a></li>
+                     <li><a href="team">{{ ::main.locale.theTeam }}</a></li>
+                     <li><a href="rules">{{ ::main.locale.ourRules }}</a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="events">{{ ::main.locale.events }}</a>
+               </li>
+               <li>
+                  {{ ::main.locale.shop }} <i class="fa fa-caret-down"></i>
+                  <ul class="dropdown">
+                     <li class="fill"></li>
+                     <li><a href="shop/diamonds">{{ ::main.locale.diamonds }}</a></li>
+                     <li><a href="shop/badges">{{ ::main.locale.badgeShop }}</a></li>
+                     <li><a href="shop/lottery">{{ ::main.locale.lottery }}</a></li>
+                  </ul>
+               </li>
+            </ul>
+            <ng-include src="'partials/modules/mottochanger.html'"></ng-include>
+         </div>
+         <div id="jumbotron">
+            <div id="user-info" ng-hide="main.user == null">
+               <a href="/client" id="enter-overlay" class="button"><i class="fa fa-arrow-right"></i></a>
+               <img src="//habbo.es/habbo-imaging/avatarimage?figure={{ main.user.look }}&size=n&direction=2&head_direction=2&crr=3&gesture=sml&frame=3">
+               <span>
+                  <h1>{{ main.user.username }} <small>{{ main.user.motto | limitTo:30 }} {{ main.user.motto.length > 30 ? '...' : ''}}</small></h1>
+                  <span id="user-credits">
+                     <i></i> {{ main.user.credits }}
+                  </span>
+                  <span id="user-diamonds">
+                     <i></i> 125
+                  </span>
+               </span>
+            </div>
+         </div>
+         <div id="content">
+            <div ng-view></div>
+         </div>
+         <div id="footer">
+            <ul>
+               <li>{{ ::main.locale.termsAndConditions }}</li>
+               <li>{{ ::main.locale.support }}</li>
+            </ul>
+            &copy;&nbsp;2015 Habbo Hotel. All rights reserved.
+         </div>
+      </div>
+      <script src="js/lib/angular/angular.js"></script>
+      <script src="js/lib/angular/angular-route.js"></script>
+      <script src="js/lib/angular/angular-animate.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/controllers/main.js"></script>
+      <script src="js/controllers/registration.js"></script>
+      <script src="js/controllers/index.js"></script>
+      <script src="js/controllers/me.js"></script>
+      <script src="js/controllers/account.js"></script>
+      <script src="js/controllers/logout.js"></script>
+      <script src="js/controllers/notfound.js"></script>
+      <script src="js/factories/auth.js"></script>
+      <script src="js/factories/registration.js"></script>
+      <script src="js/factories/articles.js"></script>
+      <script src="js/factories/locale.js"></script>
+      <script src="js/controllers/modules/articlebeans.js"></script>
+      <script src="js/controllers/modules/mottochanger.js"></script>
+   </body>
+</html>

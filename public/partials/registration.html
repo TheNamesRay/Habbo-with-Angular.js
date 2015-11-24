@@ -1,0 +1,28 @@
+<div id="column-left">
+	<div class="box">
+		<div class="title purple">{{ ::main.locale.quickRuleReview }}</div>
+		<img style="float:right; margin-left:20px" src="img/rules.png">
+		<p>{{ ::main.locale.registrationRuleSpeech }}</p>
+		<ul class="fast-rules">
+			<li>Do not steal furniture or accounts.</li>
+			<li>Do not ask to be part of the staff.</li>
+			<li>Do not ask anyone for personal information.</li>
+			<li>Do not hack, report the bug to us instead.</li>
+			<li>Do not intimidate, harass or insult people. Be nice.</li>
+		</ul>
+		Do have a good time, be creative, and make new friends!<br /><br>
+		{{ ::main.locale.fullRuleList }} <a href="/termsAndConditions">{{ ::main.locale.termsAndConditions }}</a>.
+	</div>
+</div>
+<div id="column-right">
+	<div class="box">
+		<div class="title green">{{ ::main.locale.createAnAccountAndGo }}</div>
+		<form class="regular" ng-submit="register()">
+			<p>{{ ::main.locale.byJoiningYouAcceptOur }} <a href="/termsAndConditions">{{ ::main.locale.termsAndConditions }}</a>.</p><div ng-hide="input.error==null" ng-bind="input.error" class="errorBean"></div>
+			<input type="text" ng-model="input.data.mail" placeholder="{{ ::main.locale.emailAddress }}"/>
+			<input type="text" ng-model="input.data.username" placeholder="{{ ::main.locale.username }}"/>
+			<input type="password" ng-model="input.data.password" placeholder="{{ ::main.locale.password }}"/>			
+			<button style="margin-top:10px;" class="button green block">{{ ::main.locale.createAnAccount }}</button>
+		</form>
+	</div>
+</div>
