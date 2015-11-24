@@ -14,6 +14,13 @@ A single-themed Habbo Content Management System using Angular.js and a PHP API. 
 * Flexible REST Routes
 * Very Modular
 * Localization
+* 
+### Missing ###
+
+* All pages except Index, Registration, 404, Me & Logout
+* Control Panel
+
+Although these are easy to do, just really time consuming. For only these pages I've already created more than 10 javascript files. Just remember to rely heavily on the server with Ajax requests with everything risky (account management, control panel, store...)
 
 > Is this finished, though?
 
