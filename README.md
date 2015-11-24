@@ -5,6 +5,8 @@ A single-themed Habbo Content Management System using AngularJS and a PHP API. A
 
 **Works exclusively with Azure Emulator Database**
 
+**Works only in ROOT directory (htdocs, wwwroot...), not subdirectories**
+
 ### Features ###
 
 * Single Page Application
