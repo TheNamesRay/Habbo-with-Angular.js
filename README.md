@@ -3,7 +3,7 @@ ngHabbo (PHP + JS)
 
 A single-themed Habbo Content Management System using Angular.js and a PHP API. Angular is getting more popular than ever and single page applications are becoming a thing now.
 
-**WORKS EXCLUSIVELY WITH AZURE EMULATOR 1.0 or 2.0**
+**Works exclusively with Azure Emulator Database**
 
 ### Features ###
 
