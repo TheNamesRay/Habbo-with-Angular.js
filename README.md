@@ -1,2 +1,16 @@
-# ngHabbo
-A generic Angularjs Habbo Content Management System
+ngHabbo
+=====================
+
+A single-themed Habbo Content Management System using Angular.js and a PHP API. Angular is getting more popular than ever and single page applications are becoming a thing now. This shows the basic implementation of a HabboCMS using Angular.js as the main component.
+
+### Features ###
+
+* Single Page Application
+* Model View Controller
+* Flexible REST Routes
+* Very Modular
+* Localization
+
+> Is this finished?
+
+THIS IS NOT FINISHED! And will never be. This should give you a head start on how to create Habbo SPAs using Angular, and how sessions, user data, and other stuff should be handled with a PHP API.
