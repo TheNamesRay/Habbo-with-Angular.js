@@ -14,7 +14,7 @@ A single-themed Habbo Content Management System using Angular.js and a PHP API. 
 * Flexible REST Routes
 * Very Modular
 * Localization
-* 
+
 ### Missing ###
 
 * All pages except Index, Registration, 404, Me & Logout
